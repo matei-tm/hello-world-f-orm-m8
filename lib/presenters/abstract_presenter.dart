@@ -17,4 +17,6 @@ abstract class Presenter<T> {
 }
 
 abstract class TextEditingPresenter<T> extends TextEditingController
-    implements Presenter<T> {}
+    implements Presenter<T> {
+  get descriptionLabel;
+}

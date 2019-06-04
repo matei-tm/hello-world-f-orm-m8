@@ -51,7 +51,7 @@ class _GymLocationsPageState extends State<GymLocationsPage> implements View {
                       controller: _gymLocationPresenter,
                       decoration: InputDecoration(
                         hintText: "Type a short description",
-                        labelText: "New Gym Location Entry",
+                        labelText: _gymLocationPresenter.descriptionLabel,
                         errorText: _gymLocationPresenter.isNotValid
                             ? 'Value Can\'t Be Empty'
                             : null,

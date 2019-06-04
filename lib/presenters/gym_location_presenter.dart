@@ -3,8 +3,7 @@ import 'package:hello_world_f_orm_m8/main.adapter.g.m8.dart';
 import 'package:hello_world_f_orm_m8/models/independent/gym_location.g.m8.dart';
 import 'package:hello_world_f_orm_m8/views/abstract_view.dart';
 
-class GymLocationPresenter
-    extends TextEditingPresenter<GymLocationProxy> {
+class GymLocationPresenter extends TextEditingPresenter<GymLocationProxy> {
   int currentGymLocationId;
   bool isNotValid = false;
   final View _view;
@@ -21,6 +20,8 @@ class GymLocationPresenter
   bool get textIsEmpty => text.isEmpty;
 
   bool get needUpdate => (currentGymLocationId ?? 0) > 0;
+  String get descriptionLabel =>
+      "${needUpdate ? 'Update' : 'New'} Gym Location Entry";
 
   Future<bool> loadCurrentData() async {
     if (currentGymLocationId == null) {
